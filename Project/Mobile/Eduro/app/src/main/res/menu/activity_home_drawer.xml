@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_medication"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/sidebar_medication" />
+        <item
+            android:id="@+id/nav_health"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/sidebar_health" />
+        <item
+            android:id="@+id/nav_payment"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/sidebar_payment" />
+        <item
+            android:id="@+id/nav_history"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/sidebar_history" />
+    </group>
+
+    <item android:title="Other">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/sidebar_share" />
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_menu_settings"
+                android:title="@string/sidebar_settings" />
+            <item
+                android:id="@+id/nav_help"
+                android:icon="@drawable/ic_menu_help"
+                android:title="@string/sidebar_help" />
+        </menu>
+    </item>
+
+</menu>

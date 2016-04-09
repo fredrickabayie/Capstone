@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - chms@localhost" uuid="396b11b8-0038-4806-9568-a96d42bd7cfb">
+    <database-info product="MySQL" version="5.5.5-10.1.10-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="chms"/>
+      <table id="2" parent="1" name="chms_admins"/>
+      <table id="3" parent="1" name="chms_consulting_rooms"/>
+      <table id="4" parent="1" name="chms_diseases"/>
+      <table id="5" parent="1" name="chms_districts"/>
+      <table id="6" parent="1" name="chms_gender"/>
+      <table id="7" parent="1" name="chms_height_units"/>
+      <table id="8" parent="1" name="chms_hospitals"/>
+      <table id="9" parent="1" name="chms_local_patient_registration"/>
+      <table id="10" parent="1" name="chms_medicine"/>
+      <table id="11" parent="1" name="chms_nationality_status"/>
+      <table id="12" parent="1" name="chms_officials"/>
+      <table id="13" parent="1" name="chms_patient_admit"/>
+      <table id="14" parent="1" name="chms_patient_visits"/>
+      <table id="15" parent="1" name="chms_payment_mode"/>
+      <table id="16" parent="1" name="chms_regions"/>
+      <table id="17" parent="1" name="chms_sub_districts"/>
+      <table id="18" parent="1" name="chms_temp_units"/>
+      <table id="19" parent="1" name="chms_wards"/>
+      <table id="20" parent="1" name="chms_weight_units"/>
+      <column id="21" parent="2" name="a_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="22" parent="2" name="a_fullname">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="23" parent="2" name="a_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(75)</data-type>
+      </column>
+      <column id="24" parent="2" name="a_password">
+        <mandatory>1</mandatory>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="25" parent="2" name="a_contact">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="26" parent="2" name="a_email">
+        <mandatory>1</mandatory>
+        <data-type>varchar(75)</data-type>
+      </column>
+      <column id="27" parent="2" name="a_system_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="28" parent="2" name="date_of_registration">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <key id="29" parent="2" name="PRIMARY">
+        <columns>a_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="30" parent="3" name="room_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="31" parent="3" name="room_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(75)</data-type>
+      </column>
+      <key id="32" parent="3" name="PRIMARY">
+        <columns>room_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="33" parent="4" name="d_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="34" parent="4" name="d_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <key id="35" parent="4" name="PRIMARY">
+        <columns>d_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="36" parent="5" name="district_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="37" parent="5" name="district_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="38" parent="5" name="region_ref">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="39" parent="5" name="region_ref">
+        <columns>region_ref</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="40" parent="5" name="PRIMARY">
+        <columns>district_id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="41" parent="5" name="chms_districts_ibfk_1">
+        <columns>region_ref</columns>
+        <ref-key>~.chms_regions.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="42" parent="6" name="gender_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="43" parent="6" name="gender">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <key id="44" parent="6" name="PRIMARY">
+        <columns>gender_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="45" parent="7" name="height_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="46" parent="7" name="height_unit">
+        <mandatory>1</mandatory>
+        <data-type>varchar(75)</data-type>
+      </column>
+      <key id="47" parent="7" name="PRIMARY">
+        <columns>height_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="48" parent="8" name="h_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="49" parent="8" name="h_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="50" parent="8" name="h_location">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="51" parent="8" name="h_sub_district">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="52" parent="8" name="h_district">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="53" parent="8" name="h_region">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="54" parent="8" name="h_address">
+        <mandatory>1</mandatory>
+        <data-type>varchar(1000)</data-type>
+      </column>
+      <column id="55" parent="8" name="h_contact">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="56" parent="8" name="h_email">
+        <mandatory>1</mandatory>
+        <data-type>varchar(75)</data-type>
+      </column>
+      <column id="57" parent="8" name="date_of_registration">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <index id="58" parent="8" name="h_district">
+        <columns>h_district</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="59" parent="8" name="h_region">
+        <columns>h_region</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="60" parent="8" name="h_sub_district">
+        <columns>h_sub_district
+h_district
+h_region</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="61" parent="8" name="PRIMARY">
+        <columns>h_id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="62" parent="8" name="chms_hospitals_ibfk_1">
+        <columns>h_sub_district</columns>
+        <ref-key>~.chms_sub_districts.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="63" parent="8" name="chms_hospitals_ibfk_2">
+        <columns>h_district</columns>
+        <ref-key>~.chms_districts.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="64" parent="8" name="chms_hospitals_ibfk_3">
+        <columns>h_region</columns>
+        <ref-key>~.chms_regions.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="65" parent="9" name="local_p_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="66" parent="9" name="fname">
+        <mandatory>1</mandatory>
+        <data-type>varchar(75)</data-type>
+      </column>
+      <column id="67" parent="9" name="lname">
+        <mandatory>1</mandatory>
+        <data-type>varchar(75)</data-type>
+      </column>
+      <column id="68" parent="9" name="gender">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="69" parent="9" name="date_of_birth">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <column id="70" parent="9" name="address">
+        <mandatory>1</mandatory>
+        <data-type>varchar(2000)</data-type>
+      </column>
+      <column id="71" parent="9" name="nationality">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="72" parent="9" name="region">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="73" parent="9" name="district">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="74" parent="9" name="sub_district">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="75" parent="9" name="contact">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="76" parent="9" name="email">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="77" parent="9" name="patient_system_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="78" parent="9" name="date_of_registration">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <column id="79" parent="9" name="last_date_updated">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <column id="80" parent="9" name="password">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <index id="81" parent="9" name="chms_local_patient_registration_contact_uindex">
+        <columns>contact</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="82" parent="9" name="chms_local_patient_registration_email_uindex">
+        <columns>email</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="83" parent="9" name="chms_local_patient_registration_patient_system_id_uindex">
+        <columns>patient_system_id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="84" parent="9" name="district">
+        <columns>district</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="85" parent="9" name="gender">
+        <columns>gender</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="86" parent="9" name="nationality">
+        <columns>nationality</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="87" parent="9" name="region">
+        <columns>region</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="88" parent="9" name="sub_district">
+        <columns>sub_district</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="89" parent="9" name="chms_local_patient_registration_contact_uindex">
+        <columns>contact</columns>
+        <underlying-index>chms_local_patient_registration_contact_uindex</underlying-index>
+      </key>
+      <key id="90" parent="9" name="chms_local_patient_registration_email_uindex">
+        <columns>email</columns>
+        <underlying-index>chms_local_patient_registration_email_uindex</underlying-index>
+      </key>
+      <key id="91" parent="9" name="chms_local_patient_registration_patient_system_id_uindex">
+        <columns>patient_system_id</columns>
+        <underlying-index>chms_local_patient_registration_patient_system_id_uindex</underlying-index>
+      </key>
+      <key id="92" parent="9" name="PRIMARY">
+        <columns>local_p_id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="93" parent="9" name="chms_local_patient_registration_ibfk_1">
+        <columns>region</columns>
+        <ref-key>~.chms_regions.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="94" parent="9" name="chms_local_patient_registration_ibfk_2">
+        <columns>district</columns>
+        <ref-key>~.chms_districts.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="95" parent="9" name="chms_local_patient_registration_ibfk_3">
+        <columns>sub_district</columns>
+        <ref-key>~.chms_sub_districts.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="96" parent="9" name="chms_local_patient_registration_ibfk_4">
+        <columns>gender</columns>
+        <ref-key>~.chms_gender.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="97" parent="9" name="chms_local_patient_registration_ibfk_5">
+        <columns>nationality</columns>
+        <ref-key>~.chms_nationality_status.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="98" parent="10" name="m_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="99" parent="10" name="med_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="100" parent="10" name="med_description">
+        <mandatory>1</mandatory>
+        <data-type>varchar(1000)</data-type>
+      </column>
+      <key id="101" parent="10" name="PRIMARY">
+        <columns>m_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="102" parent="11" name="nation_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="103" parent="11" name="nationality_status">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <key id="104" parent="11" name="PRIMARY">
+        <columns>nation_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="105" parent="12" name="o_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="106" parent="12" name="o_fname">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="107" parent="12" name="o_lname">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="108" parent="12" name="o_username">
+        <mandatory>1</mandatory>
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="109" parent="12" name="o_password">
+        <mandatory>1</mandatory>
+        <data-type>varchar(1000)</data-type>
+      </column>
+      <column id="110" parent="12" name="o_position">
+        <mandatory>1</mandatory>
+        <data-type>varchar(75)</data-type>
+      </column>
+      <column id="111" parent="12" name="o_health_center">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="112" parent="12" name="o_contact">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="113" parent="12" name="o_email">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="114" parent="12" name="o_system_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="115" parent="12" name="date_of_registration">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <column id="116" parent="12" name="last_date_updated">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <index id="117" parent="12" name="o_health_center">
+        <columns>o_health_center</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="118" parent="12" name="PRIMARY">
+        <columns>o_id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="119" parent="12" name="chms_officials_ibfk_1">
+        <columns>o_health_center</columns>
+        <ref-key>~.chms_hospitals.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="120" parent="13" name="pa_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="121" parent="13" name="patient_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="122" parent="13" name="hospital_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="123" parent="13" name="patient_visit_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="124" parent="13" name="ward">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="125" parent="13" name="health_progress">
+        <mandatory>1</mandatory>
+        <data-type>varchar(3000)</data-type>
+      </column>
+      <column id="126" parent="13" name="prescriptions">
+        <mandatory>1</mandatory>
+        <data-type>varchar(3000)</data-type>
+      </column>
+      <column id="127" parent="13" name="amount_paid">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="128" parent="13" name="date_of_admit">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <column id="129" parent="13" name="date_of_discharge">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <index id="130" parent="13" name="hospital_id">
+        <columns>hospital_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="131" parent="13" name="patient_id">
+        <columns>patient_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="132" parent="13" name="patient_visit_id">
+        <columns>patient_visit_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="133" parent="13" name="ward">
+        <columns>ward</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="134" parent="13" name="PRIMARY">
+        <columns>pa_id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="135" parent="13" name="chms_patient_admit_ibfk_1">
+        <columns>patient_id</columns>
+        <ref-key>~.chms_local_patient_registration.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="136" parent="13" name="chms_patient_admit_ibfk_2">
+        <columns>hospital_id</columns>
+        <ref-key>~.chms_hospitals.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="137" parent="13" name="chms_patient_admit_ibfk_3">
+        <columns>ward</columns>
+        <ref-key>~.chms_wards.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="138" parent="13" name="chms_patient_admit_ibfk_4">
+        <columns>patient_visit_id</columns>
+        <ref-key>~.chms_patient_visits.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="139" parent="14" name="pv_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="140" parent="14" name="patient_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="141" parent="14" name="hospital_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="142" parent="14" name="consulting_room">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="143" parent="14" name="temperature">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="144" parent="14" name="blood_pressure">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="145" parent="14" name="weight">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="146" parent="14" name="height">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="147" parent="14" name="symptoms">
+        <mandatory>1</mandatory>
+        <data-type>varchar(1500)</data-type>
+      </column>
+      <column id="148" parent="14" name="lab_tests">
+        <mandatory>1</mandatory>
+        <data-type>varchar(1000)</data-type>
+      </column>
+      <column id="149" parent="14" name="test_results">
+        <mandatory>1</mandatory>
+        <data-type>varchar(1500)</data-type>
+      </column>
+      <column id="150" parent="14" name="other_comments">
+        <mandatory>1</mandatory>
+        <data-type>varchar(1500)</data-type>
+      </column>
+      <column id="151" parent="14" name="disease">
+        <mandatory>1</mandatory>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="152" parent="14" name="prescription">
+        <mandatory>1</mandatory>
+        <data-type>varchar(1500)</data-type>
+      </column>
+      <column id="153" parent="14" name="mode_of_payment">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="154" parent="14" name="amount_paid">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="155" parent="14" name="date_of_input">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <column id="156" parent="14" name="last_update">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <index id="157" parent="14" name="consulting_room">
+        <columns>consulting_room</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="158" parent="14" name="disease">
+        <columns>disease</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="159" parent="14" name="hospital_id">
+        <columns>hospital_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="160" parent="14" name="mode_of_payment">
+        <columns>mode_of_payment</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="161" parent="14" name="patient_id">
+        <columns>patient_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="162" parent="14" name="PRIMARY">
+        <columns>pv_id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="163" parent="14" name="chms_patient_visits_ibfk_1">
+        <columns>patient_id</columns>
+        <ref-key>~.chms_local_patient_registration.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="164" parent="14" name="chms_patient_visits_ibfk_2">
+        <columns>hospital_id</columns>
+        <ref-key>~.chms_hospitals.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="165" parent="14" name="chms_patient_visits_ibfk_5">
+        <columns>mode_of_payment</columns>
+        <ref-key>~.chms_payment_mode.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="166" parent="14" name="chms_patient_visits_ibfk_6">
+        <columns>consulting_room</columns>
+        <ref-key>~.chms_consulting_rooms.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="167" parent="15" name="pm_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="168" parent="15" name="pm_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <key id="169" parent="15" name="PRIMARY">
+        <columns>pm_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="170" parent="16" name="region_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="171" parent="16" name="region_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <key id="172" parent="16" name="PRIMARY">
+        <columns>region_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="173" parent="17" name="sub_district_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="174" parent="17" name="sub_district_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(75)</data-type>
+      </column>
+      <column id="175" parent="17" name="district_ref">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="176" parent="17" name="district_ref">
+        <columns>district_ref</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="177" parent="17" name="PRIMARY">
+        <columns>sub_district_id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="178" parent="17" name="chms_sub_districts_ibfk_1">
+        <columns>district_ref</columns>
+        <ref-key>~.chms_districts.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="179" parent="18" name="temp_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="180" parent="18" name="temp_unit">
+        <mandatory>1</mandatory>
+        <data-type>varchar(75)</data-type>
+      </column>
+      <key id="181" parent="18" name="PRIMARY">
+        <columns>temp_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="182" parent="19" name="ward_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="183" parent="19" name="ward_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <key id="184" parent="19" name="PRIMARY">
+        <columns>ward_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="185" parent="20" name="w_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="186" parent="20" name="weight_unit">
+        <mandatory>1</mandatory>
+        <data-type>varchar(75)</data-type>
+      </column>
+      <key id="187" parent="20" name="PRIMARY">
+        <columns>w_id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>

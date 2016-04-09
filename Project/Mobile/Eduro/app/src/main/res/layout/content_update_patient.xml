@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="capstone.eduro.views.UpdatePatient"
+    tools:showIn="@layout/activity_update_patient">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@android:color/darker_gray"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/updatePatientFirstNameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/updatePatientFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="40sp"
+                android:ems="10"
+                android:hint="@string/updatePatientFirstNameHint"
+                android:inputType="textPersonName"
+                android:textSize="15sp"
+                android:typeface="monospace" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/updatePatientSurnameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/updatePatientSurname"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20sp"
+                android:ems="10"
+                android:hint="@string/updatePatientLastNameHint"
+                android:inputType="textPersonName"
+                android:textSize="15sp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:typeface="monospace" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/updatePatientGender"
+            android:prompt="@string/updatePatientGenderPrompt"
+            android:entries="@array/updatePatientGender"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal" />
+
+        <DatePicker
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+        </DatePicker>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

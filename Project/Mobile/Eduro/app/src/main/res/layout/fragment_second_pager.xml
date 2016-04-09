@@ -1,0 +1,36 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.SecondPager">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="60dp"
+        android:contentDescription="@string/onBoardImageDesc"
+        android:src="@drawable/ic_menu_gallery" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/secondPageTitle"
+        android:gravity="center"
+        android:layout_marginTop="60dp"
+        android:textColor="@android:color/white"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/secondPageDesc"
+        android:gravity="center"
+        android:padding="30dp"
+        android:layout_marginTop="120dp"
+        android:textColor="#D0D5D8"
+        android:textSize="16sp" />
+
+</FrameLayout>

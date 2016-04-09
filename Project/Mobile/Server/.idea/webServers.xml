@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="69148441-1cc8-48af-b8a7-9eb2a6c90a2a" name="csashesi_ftp" url="http://166.62.103.147">
+        <fileTransfer host="166.62.103.147" port="21" password="dfcedfcedfe0df8cdfc2dfe9dffbdfebdfc1df9fdfc2" username="fredrick_abayie@cs.ashesi.edu.gh">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

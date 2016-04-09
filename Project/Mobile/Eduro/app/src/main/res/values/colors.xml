@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1586C4</color>
+    <color name="colorPrimaryDark">#1A7299</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- Login Page Colors-->
+    <color name="login_btn_txt">#FFFFFF</color>
+
+    <!-- Screen onboarding colors-->
+    <color name="OnBoardBackground">#1586C4</color>
+    <color name="OnBoardBtn">#1586C4</color>
+</resources>

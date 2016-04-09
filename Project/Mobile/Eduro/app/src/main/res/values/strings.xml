@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">Eduro</string>
+
+
+    <!-- Onscreen boarding texts-->
+    <string name="onBoardBtn">Let\&apos;s Go!</string>
+    <string name="onBoardImageDesc">Image</string>
+    <string name="onBoardPaginationDesc">Pagination</string>
+    <string name="firstPageTitle">Records</string>
+    <string name="firstPageDesc">Get instant update of your health records when you visit a hospital or pharmacy and keep track of your previous records.</string>
+    <string name="secondPageTitle">Medications</string>
+    <string name="secondPageDesc">Manage you medications, don\&apos;t let them manage you! View medications prescribed by your doctor and pharmacist.</string>
+    <string name="thirdPageTitle">Payments</string>
+    <string name="thirdPageDesc">No need to carry money along for payment of medications, just take your phone to make instant payment with MTN mobile money.</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Home Page Strings-->
+    <string name="action_logout">Logout</string>
+
+    <!-- Home Page Sidebar-->
+    <string name="patientName">Patient Name</string>
+    <string name="patientId">Patient ID</string>
+    <string name="patientEmail">eduro@health.com</string>
+    <string name="sidebar_medication">Medications</string>
+    <string name="sidebar_health">Health Records</string>
+    <string name="sidebar_history">History</string>
+    <string name="sidebar_payment">Payments</string>
+    <string name="sidebar_share">Share</string>
+    <string name="sidebar_settings">Settings</string>
+    <string name="sidebar_help">Help &amp; Support</string>
+
+    <!-- Login Page Strings-->
+    <string name="title_activity_login">Login</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="login_btn">LOGIN</string>
+    <string name="logo_description">Login Logo</string>
+
+    <!-- Update patient profile details page-->
+    <string name="updatePatientFirstNameHint">First Name</string>
+    <string name="updatePatientLastNameHint">Last Name</string>
+    <string name="updatePatientGenderPrompt">Gender</string>
+    <string-array name="updatePatientGender">
+        <item>Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_pager">Pager</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_update_patient">UpdatePatient</string>
+</resources>
