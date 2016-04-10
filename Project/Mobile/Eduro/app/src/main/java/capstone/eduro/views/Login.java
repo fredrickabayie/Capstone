@@ -87,7 +87,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         }
 
         /**
-         * Functiont to open an http connection
+         * Function to open an http connection
          *
          * @param urls The url to be sent
          * @return Returning the response
@@ -185,7 +185,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                     + email.getText().toString().trim() + "&password=" + password.getText().toString().trim());
         } else {
             email.setError("Enter valid email address");
-//            email.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+//            email.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0); 
             password.setError("Enter valid password");
         }
     }

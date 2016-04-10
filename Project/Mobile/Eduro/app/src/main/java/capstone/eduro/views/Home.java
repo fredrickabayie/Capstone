@@ -91,6 +91,8 @@ public class Home extends AppCompatActivity
             }
         }
 
+        navigationView.setItemIconTintList(null);
+
         navigationView.setNavigationItemSelectedListener(this);
     }
 
