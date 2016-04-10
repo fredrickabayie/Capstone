@@ -68,21 +68,6 @@ public class Pager extends AppCompatActivity {
             }
         });
 
-//        intro_btn_next = (Button) findViewById(R.id.intro_btn_finish);
-//        intro_btn_next.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                if(mViewPager.getCurrentItem() == 2) { // The last screen
-//                    finishOnboarding();
-//                } else {
-//                    mViewPager.setCurrentItem(
-//                            mViewPager.getCurrentItem() + 1,
-//                            true
-//                    );
-//                }
-//            }
-//        });
-
         intro_indicator_0.setImageResource(R.drawable.ic_selected);
 
         assert mViewPager != null;

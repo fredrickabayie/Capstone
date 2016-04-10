@@ -181,7 +181,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         DownloadWebPageTask task = new DownloadWebPageTask();
 
         if (email.getText().toString().trim().length() > 0 && password.getText().toString().trim().length() > 0) {
-            task.execute("http://41.79.99.165/Capstone/Project/Mobile/Server/controllers/PatientController.php?cmd=1&email="
+            task.execute("http://192.168.1.64/Capstone/Project/Mobile/Server/controllers/PatientController.php?cmd=1&email="
                     + email.getText().toString().trim() + "&password=" + password.getText().toString().trim());
         } else {
             email.setError("Enter valid email address");
