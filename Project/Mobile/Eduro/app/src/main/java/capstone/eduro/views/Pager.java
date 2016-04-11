@@ -37,7 +37,6 @@ public class Pager extends AppCompatActivity {
      * The {@link ViewPager} that will host the section contents.
      */
     private ViewPager mViewPager;
-    Button intro_btn_next;
     Button intro_btn_skip;
 
     @Override
