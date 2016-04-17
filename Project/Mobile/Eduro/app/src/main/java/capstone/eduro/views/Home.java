@@ -183,4 +183,5 @@ public class Home extends AppCompatActivity
     public void onFragmentInteraction(Uri uri) {
 //        Toast.makeText(getApplicationContext(), "frag", Toast.LENGTH_LONG).show();
     }
+
 }

@@ -11,7 +11,7 @@ import capstone.eduro.views.Login;
 /**
  * Created by fredrickabayie on 16/11/15.
  */
-public class SessionManager {
+public class SessionManager  {
 
     // Shared Preferences
     SharedPreferences pref;

@@ -26,7 +26,7 @@
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:layout_marginBottom="8dp"
-            android:theme="@style/M"
+
             android:layout_marginTop="8dp">
 
             <EditText
@@ -77,16 +77,6 @@
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
             android:layout_gravity="center_horizontal" />
-
-        <DatePicker
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp">
-
-        </DatePicker>
 
     </LinearLayout>
 
